@@ -1,0 +1,41 @@
+<style>
+  .move-top{
+    position: fixed;
+    right: 10px;
+    bottom: 20px;
+    height: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    transform: rotate(90deg);
+    font-size: 90%;
+    line-height: 1.5rem;
+    color: #000;
+    padding: 0 0 0 35px;
+    border-top: solid 1px;
+    z-index: 2;
+  }
+  .move-top:hover{
+    color: red;
+  }
+  .move-top::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -1px;
+    left: 0px;
+    width: 15px;
+    border-top: solid 1px;
+    transform: rotate(35deg);
+    transform-origin: left top;
+  }
+</style>
+
+<div id="footer">
+  <noscript class="noJS">
+    <footer class="glass-filter">
+      <h5>お使いのブラウザは、JavaScriptが無効です。<br>
+          サイトは正しく動作しません。</h5>
+    </footer>
+  </noscript>
+  <a class="move-top" href="#top">TOP</a>
+</div>
