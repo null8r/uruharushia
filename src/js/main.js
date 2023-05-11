@@ -8,17 +8,11 @@ window.onload = function(){
   }
 };
 
-var voice = [
-  new Audio('src/audio/a.mp3'),
-  new Audio('src/audio/b.mp3'),
-  new Audio('src/audio/c.mp3')
-];
-
 function playVoice(){
   clickCount();
 
-  var random = Math.floor( Math.random() * voice.length );
-  voice[random].play();
+  var random = Math.floor( Math.random() * 31 ) + 1;
+  new Audio('src/audio/' + random + '.mp3').play();
 }
 
 var click = 0;
@@ -30,7 +24,7 @@ function clickCount(){
     document.getElementById('click').innerHTML = click + "回";
   }
   else{
-    document.getElementById('click').innerHTML = "エラー";
+    document.getElementById('click').innerHTML = "こんるし！！";
   }
 }
 
