@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+
+  <style>
+    a {
+      text-decoration: none !important;
+    }
+
+    .sub-txt {
+      font-size: 80%;
+      text-align: center;
+    }
+
+    ul {
+      padding-left: 0px;
+      display: inline-block;
+      justify-content: center;
+      width: 100%;
+      margin: 0;
+    }
+
+    li {
+      justify-content: left;
+    }
+
+    .link-list ul {
+      display: flex;
+      list-style: none;
+      text-align: center;
+      padding-left: 0;
+    }
+
+    .link-list a {
+      padding: 5px;
+      display: block;
+      line-height: 15px;
+      text-align: center;
+    }
+
+    .link-list li {
+      width: 7em;
+      width: 30%;
+      min-width: 20px;
+      max-width: 7em;
+      height: auto;
+      margin: 5px;
+    }
+
+    @media(max-width: 1580px) {
+      .link-list ul {
+        flex-wrap: wrap;
+      }
+    }
+
+    @media(min-width: 901px) {
+      .link-list li:before {
+        width: 7em;
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 0;
+        display: block;
+        background: #5bc8ac;
+        z-index: -1;
+        transition: .2s;
+      }
+    }
+
+
+
+    .link-list a {
+      cursor: pointer;
+      border: solid 1px black;
+      color: black;
+      transition: all 0.3s;
+      font-size: 16px;
+      font-size: clamp(13px, 2vw, 16px);
+    }
+
+    .link-list a:hover {
+      background: black;
+      color: white;
+      border-radius: 10px;
+    }
+
+
+    .check {
+      display: none;
+    }
+
+    .label {
+      background: #aaa;
+      color: #000;
+      display: block;
+      margin-bottom: 1px;
+      padding: 10px;
+      text-align: center;
+    }
+
+    .link-list {
+      border: 1px solid #333;
+      height: 0;
+      opacity: 0;
+      padding: 0 10px;
+      transition: .3s;
+      visibility: hidden;
+    }
+
+    .check:checked+.label+.link-list {
+      /*height: 75px;*/
+      height: auto;
+      opacity: 1;
+      visibility: visible;
+    }
+  </style>
+
+  <title>menu</title>
+</head>
+
+<body>
+  <div id="toc">
+    <input id="check1" class="check" type="checkbox">
+    <label class="label" for="check1">目次</label>
+    <div class="link-list">
+      <ul>
+        <li>
+          <a href="#hololive-gen0">
+            <span>0期生</span><br>
+            <span class="sub-txt">Gen0</span>
+          </a>
+        </li>
+        <br>
+        <li>
+          <a href="#hololive-gen1">
+            <span>1期生</span><br>
+            <span class="sub-txt">Gen1</span>
+          </a>
+        </li>
+        <br>
+        <li>
+          <a href="#hololive-gen2">
+            <span>2期生</span><br>
+            <span class="sub-txt">Gen2</span>
+          </a>
+        </li>
+        <br>
+        <li>
+          <a href="#hololive-gamers">
+            <span>ゲーマーズ</span><br>
+            <span class="sub-txt">Gamers</span>
+          </a>
+        </li>
+        <br>
+        <li>
+          <a href="#hololive-gen3">
+            <span>3期生</span><br>
+            <span class="sub-txt">Gen3</span>
+          </a>
+        </li>
+        <br>
+        <li>
+          <a href="#hololive-gen4">
+            <span>4期生</span><br>
+            <span class="sub-txt">Gen4</span>
+          </a>
+        </li>
+        <br>
+        <li>
+          <a href="#hololive-gen5">
+            <span>5期生</span><br>
+            <span class="sub-txt">Gen5</span>
+          </a>
+        </li>
+        <br>
+        <li>
+          <a href="#hololive-gen6">
+            <span>6期生</span><br>
+            <span class="sub-txt">Gen6</span>
+          </a>
+        </li>
+        <li>
+          <a href="#hololive-myth">
+            <span>Myth</span><br>
+            <span class="sub-txt">神話</span>
+          </a>
+        </li>
+        <li>
+          <a href="#hololive-project-hope">
+            <span>Project: HOPE</span><br>
+            <span class="sub-txt">希望</span>
+          </a>
+        </li>
+        <li>
+          <a href="#hololive-council">
+            <span>Council</span><br>
+            <span class="sub-txt">議会</span>
+          </a>
+        </li>
+        <li>
+          <a href="#hololive-id">
+            <span>Indonesia</span><br>
+            <span class="sub-txt">インドネシア</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- 
+      <input id="check2" class="check" type="checkbox">
+      <label class="label" for="check2">目次</label>
+      <div class="link-list">
+        <ul>
+          <li>
+            <a href="">
+              <span></span><br>
+              <span class="sub-txt"></span>
+            </a>
+          </li>
+          <br>
+  
+        </ul>
+      </div>
+    -->
+  </div>
+
+</body>
+
+</html>
