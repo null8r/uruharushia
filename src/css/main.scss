@@ -77,10 +77,40 @@ img.emoji{
   margin: 20px;
   margin-top: 70px;
   padding: 20px;
+
+  & p{
+    width: 90%;
+    margin: 0 auto;
+  }
 }
-.attention p{
-  width: 90%;
-  margin: 0 auto;
+
+.birthday {
+  background: rgba(48, 249, 210, 0.4);
+  border-radius: 10px;
+  margin: 0 auto 0;
+  padding: 20px;
+  width: 50%;
+  font-size: 110%;
+
+  & #happy-birthday{
+    display: none;
+    font-size: 200%;
+    justify-content: center;
+    }
+
+  & .count{
+    text-align: center; 
+  }
+  & .count-num{
+    font-size: 240%;
+  }
+}
+@media(max-width: 770px){
+  .birthday{
+    background: none;
+    width: 80%;
+    min-width: none;
+  }
 }
 
 .link{
@@ -112,7 +142,7 @@ img.emoji{
 
 .box{
   position: relative;
-  border-radius: 20px;
+  border-radius: 10px;
   background: rgba(48, 249, 210, 0.4);
   padding: 40px;
   width: 90%;
@@ -157,7 +187,8 @@ img.emoji{
   }
 }
 @media(max-width: 500px){
-  .box{
+  .box,
+  .birthday{
     background: none;
     width: 100%;
     min-width: none;
