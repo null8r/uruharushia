@@ -29,7 +29,7 @@ function main(){
   if( date > 365 ){
     date = date - 366;
   }
-  
+
   if( date == 0 ){
     document.getElementById('countdown').style.display = 'none';
     document.getElementById('happy-birthday').style.display = 'flex';
@@ -40,7 +40,7 @@ function main(){
     document.getElementById('happy-birthday').innerHTML = "";
   }
 
-  document.getElementById('days').innerHTML = ("0" + days).slice(-3);
+  document.getElementById('days').innerHTML = ("0" + date).slice(-3);
   document.getElementById('hours').innerHTML = ("0" + hours).slice(-2);
   document.getElementById('minutes').innerHTML = ("0" + minutes).slice(-2);
   document.getElementById('seconds').innerHTML = ("0" + seconds).slice(-2);
