@@ -10,7 +10,7 @@ function main(){
   let bMinutes = 0;
   let bSeconds = 0;
 
-  if( nowDate.getMonth() > bMonth ){
+  if( nowDate.getMonth() > bMonth || nowDate.getDate() > bDate  ){
     bYear += 1;
   }
 
@@ -29,10 +29,6 @@ function main(){
   diffDates = diffDates % ( 1000 * 60);
 
   let seconds = Math.floor(diffDates / 1000);
-
-  if( date > 365 ){
-    date = date - 366;
-  }
 
   if( date == 0 ){
     document.getElementById('countdown').style.display = 'none';
