@@ -3,14 +3,18 @@ function main(){
   let now = nowDate.getTime();
   let tYear = nowDate.getFullYear();
 
-  let bYears = tYear + 1;
-  let bMonths = 1 - 1;
+  let bYear = tYear;
+  let bMonth = 1 - 1;
   let bDate = 22;
   let bHours = 0;
   let bMinutes = 0;
   let bSeconds = 0;
 
-  let birthday = new Date( bYears, bMonths, bDate, bHours, bMinutes, bSeconds);
+  if( nowDate.getMonth() > bMonth ){
+    bYear += 1;
+  }
+
+  let birthday = new Date( bYear, bMonth, bDate, bHours, bMinutes, bSeconds);
   let bTarget = birthday.getTime();
 
   let diffDates = bTarget - now;
