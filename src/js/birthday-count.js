@@ -3,7 +3,7 @@ function main(){
   let now = nowDate.getTime();
   let tYear = nowDate.getFullYear();
 
-  let aDate = 1 * 1000;
+  let aDate = 1 * ( 24 * 60 * 60 * 1000 );
 
   let bYear = tYear;
   let bMonth = 1 - 1;
@@ -32,7 +32,9 @@ function main(){
 
   let seconds = Math.floor(diffDates / 1000);
 
-  if( diffDates <= aDate ){
+  diffDates = bTarget - now;
+
+  if( diffDates <= 0 ){
     document.getElementById('countdown').style.display = 'none';
     document.getElementById('happy-birthday').style.display = 'flex';
     document.getElementById('happy-birthday').innerHTML = '誕生日おめでとう！！';
