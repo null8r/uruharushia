@@ -3,6 +3,8 @@ function main(){
   let now = nowDate.getTime();
   let tYear = nowDate.getFullYear();
 
+  let aDate = 1 * 1000;
+
   let bYear = tYear;
   let bMonth = 1 - 1;
   let bDate = 22;
@@ -30,20 +32,20 @@ function main(){
 
   let seconds = Math.floor(diffDates / 1000);
 
-  if( date == 0 ){
+  if( diffDates <= aDate ){
     document.getElementById('countdown').style.display = 'none';
     document.getElementById('happy-birthday').style.display = 'flex';
-    document.getElementById('happy-birthday').innerHTML = "誕生日おめでとう！！";
+    document.getElementById('happy-birthday').innerHTML = '誕生日おめでとう！！';
   }
   else{
     document.getElementById('countdown').style.display = '';
-    document.getElementById('happy-birthday').innerHTML = "";
+    document.getElementById('happy-birthday').innerHTML = '';
   }
 
-  document.getElementById('days').innerHTML = ("0" + date).slice(-3);
-  document.getElementById('hours').innerHTML = ("0" + hours).slice(-2);
-  document.getElementById('minutes').innerHTML = ("0" + minutes).slice(-2);
-  document.getElementById('seconds').innerHTML = ("0" + seconds).slice(-2);
+  document.getElementById('days').innerHTML = ('0' + date).slice(-3);
+  document.getElementById('hours').innerHTML = ('0' + hours).slice(-2);
+  document.getElementById('minutes').innerHTML = ('0' + minutes).slice(-2);
+  document.getElementById('seconds').innerHTML = ('0' + seconds).slice(-2);
 }
 
 setInterval('main()',1000);
