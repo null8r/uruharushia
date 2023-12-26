@@ -12,7 +12,7 @@ function main(){
   let bMinutes = 0;
   let bSeconds = 0;
 
-  if( nowDate.getMonth() > bMonth || nowDate.getDate() > bDate  ){
+  if( nowDate.getMonth() > bMonth || nowDate.getMonth() > bMonth[i] && nowDate.getDate() > bDate  ){
     bYear += 1;
   }
 
